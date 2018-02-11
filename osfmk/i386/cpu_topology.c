@@ -26,6 +26,8 @@
  * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
  */
 
+#include <stdint.h>
+#include <stddef.h>
 #include <mach/machine.h>
 #include <mach/processor.h>
 #include <kern/kalloc.h>

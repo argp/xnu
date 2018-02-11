@@ -102,9 +102,6 @@ endif
 
 # Shared C/C++ warning flags
 WARNFLAGS_STD := \
-	-Weverything \
-	-Wextra \
-	$(WERROR) \
 	-Wpointer-arith \
 	-Wreturn-type \
 	-Wcast-qual \
@@ -145,8 +142,6 @@ WARNFLAGS_STD := \
 	-Wno-shift-sign-overflow \
 	-Wno-switch-enum \
 	-Wno-undef \
-	-Wno-unused-macros \
-	-Wno-used-but-marked-unused \
 	-Wno-variadic-macros \
 	-Wno-vla \
 	-Wno-zero-length-array
