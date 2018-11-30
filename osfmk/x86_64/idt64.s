@@ -517,8 +517,8 @@ L_dispatch_64bit:
 	/*
 	 * Save segment regs - for completeness since theyre not used.
 	 */
-	movl	%fs, R64_FS(%r15)
-	movl	%gs, R64_GS(%r15)
+	mov     %fs, R64_FS(%r15)
+	mov     %gs, R64_GS(%r15)
 
 	/* Save general-purpose registers */
 	mov	%rax, R64_RAX(%r15)
@@ -582,10 +582,10 @@ L_dispatch_U32: /* 32-bit user task */
 	/*
 	 * Save segment regs
 	 */
-	movl	%ds, R32_DS(%r15)
-	movl	%es, R32_ES(%r15)
-	movl	%fs, R32_FS(%r15)
-	movl	%gs, R32_GS(%r15)
+	mov     %ds, R32_DS(%r15)
+	mov     %es, R32_ES(%r15)
+	mov     %fs, R32_FS(%r15)
+	mov     %gs, R32_GS(%r15)
 
 	/*
 	 * Save general 32-bit registers

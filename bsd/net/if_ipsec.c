@@ -385,7 +385,11 @@ ipsec_interface_needs_netagent(ifnet_t interface)
 		return (FALSE);
 	}
 
-	return (pcb->ipsec_needs_netagent == true);
+#if ENABLE_NEXUS
+    return (pcb->ipsec_needs_netagent == true);
+#else
+    return false;
+#endif
 }
 
 static errno_t
